@@ -1,0 +1,20 @@
+.box-text{
+    padding-top:10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 450px;
+    height: 470px;
+}
+#input{
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.registerBtn{
+    width: 350px;
+    height: 40px;
+    background-color: #3F90FC;
+    color: white;
+    border: none;
+}

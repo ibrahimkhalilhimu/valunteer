@@ -1,0 +1,24 @@
+.navbar-brand img{
+    width: 150px;
+}
+#link-text{
+    padding-right: 30px;
+    color:black;
+}
+#link-text-register{
+    background-color: #3F90FC;
+    color: white;
+    margin-right:10px ;
+   padding-left: 15px;
+  padding-right: 15px; 
+  border-radius: 6px;
+ 
+
+}
+#link-text-admin{
+    background-color: black;
+    color: white;
+   padding-left: 15px;
+   padding-right: 15px; 
+   border-radius: 6px;
+}

@@ -1,0 +1,28 @@
+img{
+    padding-top: 30px;
+    width: 260px;
+}
+.box{
+    padding-top: 90px;
+   
+    
+}
+.boxText{
+    
+    padding-top:100px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 500px;
+    height: 400px;
+}
+.boxText button{
+   border-radius: 15px;
+  width: 400px;
+  height: 40px;
+  border:1px solid gray;
+  background-color: white;
+
+}
+.boxText button img{
+    width: 50px;
+}
