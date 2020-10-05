@@ -15,18 +15,14 @@ const Register = () => {
     const dataText = FakeData.find(data=>data.id ==id)
     
     const [homeData,setHomeData]= useState(dataText)
-    // useEffect(()=>{
-    //     fetch('http://localhost:5000/valunteer/'+id)
-    //     .then(res=>res.json())
-    //     .then(data=>setHomeData(data))
-    // },[id])
+  
 
     let history = useHistory();
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => {
       history.push("/event")
-        const newData ={...loggedInUser, data}
+        const newData ={...loggedInUser, data,dataText}
 
         fetch('http://localhost:5000/addRegister',{
             method:'POST',
@@ -45,32 +41,7 @@ const Register = () => {
         })
     }
 
-    
-    // let history = useHistory();
-    
-    // const handleSubmit=(e,data)=>{
-    //     // history.push("/event")
-    //     const newData ={...loggedInUser, register:data}
-
-    //     fetch('http://localhost:5000/addRegister',{
-    //         method:'POST',
-    //         headers:{ 
-    //             'Content-Type':'application/json'
-    //         },
-    //         body:JSON.stringify(newData)
-    //     })
-    //     .then(res=>res.json())
-    //     .then(data=>{
-           
-    //       if (data) {
-           
-    //         alert('your register place successfully')
-    //       }
-    //     })
-
-
-    //     e.preventDefault()
-    // }
+  
 
 
 
@@ -103,14 +74,3 @@ export default Register;
 
 
 
-
-
-// <form className="py-3" onSubmit={handleSubmit}>
-// <input type="text" defaultValue={loggedInUser.name} placeholder="Full Name"id="input" /><br/><br/>
-// <input type="email" defaultValue={loggedInUser.email} name="" id="input" placeholder="Username or email"/><br/><br/>
-// <input type="date" name="" id="input" placeholder="Date"/><br/><br/>
-// <input type="text" placeholder="Description"id="input" /><br/><br/>
-// <input type="text" placeholder="Organize at the library"id="input" defaultValue={homeData.title} /><br/><br/>
-// <input className="registerBtn " type="submit" defaultValue="Registration"/><br/><br/>
-
-// </form>

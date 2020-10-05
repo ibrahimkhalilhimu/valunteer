@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const Events = () => {
@@ -7,7 +6,10 @@ const Events = () => {
     useEffect(()=>{
       fetch('http://localhost:5000/register')
       .then(res => res.json())
-      .then(data=>setRegisterData(data))
+      .then(data=>{
+        console.log(data);
+        setRegisterData(data)
+      })
     },[])
       const handleDelete =(id)=>{
        
@@ -30,7 +32,7 @@ const Events = () => {
                   <div className="col-md-6">
 
               <div className="card " >
-            <img className="card-img-top" src="..." alt="Card image cap"/>
+            <img className="card-img-top" src={data.dataText.img}alt="Card image cap"/>
             <div className="card-body">
             <h5 className="card-title">{data.data.Organize}</h5>
           <p className="card-text">{data.data.date}</p>
