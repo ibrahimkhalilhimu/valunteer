@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import logo from '../../logos/Group 1329.png'
 import './Header.css'
 
 const Header = () => {
+  const [loggedInUser,setLoggedInUser]= useContext(UserContext)
     return (
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light ">
@@ -17,10 +19,14 @@ const Header = () => {
     <div className="navbar-nav ml-auto">
       <Link className="nav-link" id="link-text" to="home">Home <span className="sr-only">(current)</span></Link>
       <Link className="nav-link " id="link-text" to="">Donation</Link>
-      <Link className="nav-link" id="link-text" to="">Events</Link>
+      <Link className="nav-link" id="link-text" to="event">Events</Link>
       <Link className="nav-link" id="link-text" to="">Blog</Link>
-      <Link className="nav-link" id="link-text-register" to="">Register</Link>
-      <Link className="nav-link" id="link-text-admin" to="admin">Admin</Link>
+ 
+    {loggedInUser &&   <Link className="nav-link" to="">{loggedInUser.name}</Link>}
+    
+   <Link className="nav-link" id="link-text-register" to="">Register</Link>
+
+     <Link className="nav-link" id="link-text-admin" to="admin">Admin</Link>
     </div>
   </div>
 </nav>

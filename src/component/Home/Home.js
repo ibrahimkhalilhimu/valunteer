@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Home.css'
 import Header from '../Header/Header';
-import FakeData from '../../FakeData/FakeData';
 import HomeDetails from './HomeDetails';
 
 
 const Home = () => {
-    const [data,setData] = useState(FakeData)
+    const [data,setData] = useState([])
+    
 
+    useEffect(()=>{
+        fetch('http://localhost:5000/valunteers')
+        .then(res => res.json())
+        .then(data=> setData(data))
+    },[])
 
     return (
         < div className="container">
