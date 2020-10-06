@@ -24,7 +24,7 @@ const Register = () => {
       history.push("/event")
         const newData ={...loggedInUser, data,dataText}
 
-        fetch('http://localhost:5000/addRegister',{
+        fetch('https://polar-atoll-99868.herokuapp.com/addRegister',{
             method:'POST',
             headers:{ 
                 'Content-Type':'application/json'

@@ -26,7 +26,7 @@ const Header = () => {
     
    <Link className="nav-link" id="link-text-register" to="">Register</Link>
 
-     <Link className="nav-link" id="link-text-admin" to="admin">Admin</Link>
+     <Link className="nav-link" id="link-text-admin" to="">Admin</Link>
     </div>
   </div>
 </nav>

@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 const Events = () => {
     const [registerData,setRegisterData]=useState([])
     useEffect(()=>{
-      fetch('http://localhost:5000/register')
+      fetch('https://polar-atoll-99868.herokuapp.com/register')
       .then(res => res.json())
       .then(data=>{
         console.log(data);
@@ -13,7 +13,7 @@ const Events = () => {
     },[])
       const handleDelete =(id)=>{
        
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://polar-atoll-99868.herokuapp.com/delete/${id}`,{
           method:'DELETE'
       })
       .then(res=>res.json())

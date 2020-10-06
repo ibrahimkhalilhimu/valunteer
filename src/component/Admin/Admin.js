@@ -1,9 +1,10 @@
-import React from 'react';
+import {React,useEffect,useState} from 'react';
 import FakeData from '../../FakeData/FakeData';
+import Header from '../Header/Header';
 
 const Admin = () => {
     const handleAdd=()=>{
-        // fetch('http://localhost:5000/addValunteer',{
+        // fetch('https://polar-atoll-99868.herokuapp.com/addValunteer',{
         //     method:'POST',
         //     headers:{ 
         //         'Content-Type':'application/json'
@@ -11,10 +12,12 @@ const Admin = () => {
         //     body:JSON.stringify(FakeData)
         // })
      }
+   
     
     return (
         <div className="container py-5">
-            <button onClick={handleAdd}>Add valunteer</button>
+            <Header></Header>
+          
         </div>
     );
     };

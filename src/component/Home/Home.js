@@ -9,7 +9,7 @@ const Home = () => {
     
 
     useEffect(()=>{
-        fetch('http://localhost:5000/valunteers')
+        fetch('https://polar-atoll-99868.herokuapp.com/valunteers')
         .then(res => res.json())
         .then(data=> setData(data))
     },[])
