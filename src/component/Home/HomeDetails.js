@@ -13,16 +13,21 @@ const HomeDetails = (props) => {
     }
     return (
         <div className="col-md-3">
-        <div className="card-deck">
-  <div onClick={()=>handleClick(id)} className="card text-center w-50">
-    <img className="card-img-top mx-auto d-block" src={img} alt="Card image cap"/>
+      
+     
+      <div onClick={()=>handleClick(id)} className="card text-center w-100">
+    <img className="card-img-top img-fluid" src={img} alt=""/>
     <div style={{backgroundColor:`#${Math.floor(Math.random()*16777215).toString(16)}`}} className="card-footer">
     <small className="text-white">{title}</small>
     </div>
-    </div>
-        </div>
+    </div> 
+       
         </div>
     );
 };
 
 export default HomeDetails;
+
+
+
+ 

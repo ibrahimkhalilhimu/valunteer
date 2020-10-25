@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import logo from '../../logos/Group 1329.png'
+import google from '../../logos/Group 571.png'
 import './Login.css'
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -47,7 +48,11 @@ const Login = () => {
                 <div className="boxText m-auto">
                 <h3>LogIn With</h3>
                 <div className="py-4">
-                <button onClick={handleGoogle}> Continue with Google</button><br/><br/>
+                <button onClick={handleGoogle}>
+                    
+                     Continue with Google
+                  
+                     </button><br/><br/>
                 <h6>Dont't have an account?<Link to="">create new account</Link></h6>
                 </div>
                 </div>

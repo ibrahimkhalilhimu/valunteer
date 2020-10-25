@@ -1,8 +1,9 @@
-.card-img-top{
-    width:255px;
+.card img{
+ 
 }
 .card{
     border:none;
+    cursor: pointer;
     
 }
 
